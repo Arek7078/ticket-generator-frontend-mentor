@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body
+    class=" relative flex justify-center h-screen  bg-neutral-50 bg-[url(../public/images/background-mobile.png)] bg-cover bg-no-repeat bg-center sm:bg-[url(../public/images/background-tablet.png)] md:bg-[url(../public/images/background-desktop.png)] overflow-hidden"
+  >
+    <!-- patterns -->
+    <img
+      class="absolute bg-cover top-0 left-0 bg-no-repeat"
+      src="../public/images/pattern-lines.svg"
+      alt="lines"
+    />
+    <img
+      src="./public/images/pattern-squiggly-line-bottom-mobile-tablet.svg"
+      alt="mobile-tabletline"
+      class="absolute bottom-0 left-0 w-1/2 sm:hidden"
+    />
+    <img
+      src="./public/images/pattern-squiggly-line-bottom-desktop.svg"
+      alt="desktopline"
+      class="hidden sm:block absolute bottom-0 left-0 w-1/2"
+    />
+    <img
+      src="./public/images/pattern-squiggly-line-top.svg"
+      alt="line top right"
+      class="absolute top-0 right-0 w-1/3"
+    />
+    <img src="./public/images/pattern-circle.svg" alt="circle" class="absolute top-60 right-10 w-1/4 sm:w-1/5 sm:right-30 md:w-1/6 md:right-40 lg:w-1/7 lg:right-50" />
+    <!-- patterns end -->
+
+    <!-- form start -->
+     <form id="form" action="" method="post" class="container flex flex-col align-center items-center py-5 z-10 ">
+      <!-- logo -->
+      <img src="./public/images/logo-full.svg" alt="logo" class="w-1/3 mt-8 sm:w-1/4 md:w-1/5 lg:w-1/6 ">
+      <!-- logo end -->
+       <!-- description -->
+        <h3
+        id="description"
+        class="text-[1.5rem] md:text-2xl lg:text-[2.25rem] text-center my-4 text-white px-5"
+      >
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h3>
+      <p
+        id="description-p"
+        class="text-[1rem] md:text-[1.125rem] text-[hsl(245,15%,58%)] text-center px-5"
+      >
+        Secure your spot at next year's biggest coding conference
+      </p>
+      <!-- description end -->
+       <!-- inputs start -->
+        <!-- upload -->
+        <input type="file" name="upload" id="upload" class="text-white hidden">
+        <label id="UploadLabel" for="upload" class="uploadContainer  w-[90%] h-[30%] md:max-w-[500px] mx-auto rounded-lg border-2 border-neutral-500 bg-[rgba(87,91,110,0.2)] px-3 text-white placeholder:text-neutral-500 cursor-pointer flex justify-around flex-col align-center items-center mt-5 ">
+          <!-- upload ends -->
+           <img src="./public/images/icon-upload.svg" alt="uploadIcon" class="w-[30px] h-[30px]">
+           <span id="upload-text" class=" text-[hsl(245,15%,58%)]"
+          >Drag and drop or click to upload</span
+        > 
+        </label>
+        <div
+        class="upload-description-container w-[90%] flex  gap-1 md:gap-2 mx-4 md:mx-auto md:max-w-[500px] mt-1"
+      >
+        <img src="./public/images/icon-info.svg" alt="info" />
+        <p
+          id="upload-description"
+          class="text-[hsl(245,15%,58%)] text-[0.6rem] md:text-[0.75rem]"
+        >
+          Upload your photo (JPG or PNG, max size: 500kb)
+        </p>
+      </div>
+
+
+
+        <label
+        for="name"
+        class="block text-left w-[90%] text-white  mb-2 md:max-w-[500px] mt-2"
+        >Full Name</label
+      >
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        class="w-[90%] h-[10%] md:max-w-[500px] mx-auto rounded-lg border-2 border-neutral-500 bg-[rgba(87,91,110,0.2)] px-3 text-white placeholder:text-neutral-500"
+      />
+
+      <label
+        for="email"
+        class="block text-left w-[90%] text-white  mb-2 md:max-w-[500px] mt-2"
+        >Email Adress</label
+      >
+      <input
+        type="email"
+        name="email"
+        id="email"
+        required
+        placeholder="example@email.com"
+        class="w-[90%] h-[10%] md:max-w-[500px] mx-auto rounded-lg border-2 border-neutral-500 bg-[rgba(87,91,110,0.2)] px-3 text-white placeholder:text-neutral-500"
+      />
+
+      <label
+        for="github"
+        class="block text-left w-[90%] text-white  mb-2 md:max-w-[500px] mt-2"
+        >GitHub Username</label
+      >
+      <input
+        type="text"
+        name="github"
+        id="github"
+        required
+        placeholder="@yourusername"
+        class="w-[90%] h-[10%] md:max-w-[500px] mx-auto rounded-lg border-2 border-neutral-500 bg-[rgba(87,91,110,0.2)] px-3 text-white placeholder:text-neutral-500"
+      />
+
+      <input
+        id="submit"
+        type="submit"
+        value="Generate My Ticket"
+        class="w-[90%] md:max-w-[500px] h-[10%] mx-auto mt-4 rounded-lg cursor-pointer bg-[hsl(7,88%,67%)] text-[hsl(248,70%,10%)] text-[1.2rem] md:text-[1.25rem] lg:text-[1.3rem] hover:brightness-105 hover:-translate-y-px active:translate-y-0 transition"
+      />
+        <!-- inputs end -->
+     </form>
+     <!-- form ends -->
+      <!-- ticket section start -->
+       <section id="ticketSection" class="container hidden flex-col align-center items-center py-5 z-10 ">
+        <!-- logo -->
+      <img src="./public/images/logo-full.svg" alt="logo" class="w-1/3 mt-8 sm:w-1/4 md:w-1/5 lg:w-1/6 ">
+      <!-- logo end -->
+       <!-- description ticket start -->
+        <h3
+        id="description-ticket"
+        class="text-[1.5rem] md:text-2xl lg:text-[2.25rem] text-center my-4 px-5 bg-gradient-to-r from-[hsl(7,86%,67%)] to-white bg-clip-text text-transparent"
+      >
+        Congrats, Jonatan Kristof! Your Ticket is Ready.
+      </h3>
+      <p
+        id="description-p-ticket"
+        class="text-[1rem] md:text-[1.125rem] text-center px-5 bg-gradient-to-r from-[hsl(7,86%,67%)] to-white bg-clip-text text-transparent"
+       >hello JS</p>
+        <!-- description ticket ends -->
+         <!-- ticket starts -->
+          <div id="ticket" class="relative mt-20 w-[300px] h-[200px] sm:w-[350px] sm:h-[220px] md:w-[400px] md:h-[250px] lg:w-[450px] lg:h-[300px] ">
+            <!-- ticketImage -->
+            <img src="./public/images/pattern-ticket.svg" alt="ticket">
+            <!-- logoImage -->
+             <img src="./public/images/logo-full.svg" alt="logoImage" class="absolute top-4 left-4 w-24 h-8 sm:w-28 sm:h-10 md:w-32 md:h-12 lg:w-36 lg:h-14">
+             <!-- date -->
+              <p id="date" class="absolute top-12 left-11 text-neutral-300 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem]">
+                17.08.2025
+              </p>
+          </div>
+          <!-- ticket ends -->
+
+       </section>
+       <!-- ticket section ends -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
