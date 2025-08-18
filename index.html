@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="./public/images/favicon-32x32.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Ticket Generator</title>
     <link rel="stylesheet" href="./src/style.css" />
   </head>
   <body
@@ -34,8 +34,8 @@
     <img src="./public/images/pattern-circle.svg" alt="circle" class="absolute top-60 right-10 w-1/4 sm:w-1/5 sm:right-30 md:w-1/6 md:right-40 lg:w-1/7 lg:right-50" />
     <!-- patterns end -->
 
-    <!-- form start -->
-     <form id="form" action="" method="post" class="container flex flex-col align-center items-center py-5 z-10 ">
+    <!-- form start zamien  -->
+     <form id="form" action="" method="post" class="container flex flex-col align-center items-center py-5 z-10 "> 
       <!-- logo -->
       <img src="./public/images/logo-full.svg" alt="logo" class="w-1/3 mt-8 sm:w-1/4 md:w-1/5 lg:w-1/6 ">
       <!-- logo end -->
@@ -154,6 +154,24 @@
               <p id="date" class="absolute top-12 left-11 text-neutral-300 text-[0.6rem] md:text-[0.8rem] lg:text-[1rem]">
                 17.08.2025
               </p>
+              <!-- avatar start -->
+               <div id="avatarContainer" class="absolute top-19 left-4 w-[50px] h-[50px]
+                                                sm:w-[60px] sm:h-[60px] sm:top-21 
+                                                md:w-[70px] md:h-[70px]md:top-23
+                                                 lg:w-[80px] lg:h-[80px] lg:top-26
+               "></div>  
+               <!-- avatar ends -->
+                <!-- name + github -->
+                <div class="absolute top-19 left-20 text-white text-[1rem] sm:text-[1.1rem] sm:top-21 sm:left-23
+                 md:text-[1.2rem] md:top-23 md:left-26
+                  lg:text-[1.3rem] lg:top-28 lg:left-28">
+                  <p id="name-ticket">Jonatan Kristof</p>
+                  <div class="flex gap-1 ">
+                    <img src="./public/images/icon-github.svg" alt="github" class="inline-block w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-7 lg:h-7">
+                  <p id="github-ticket" class="text-neutral-500 text-[0.6rem] sm:text-[0.8rem] md:text-[1rem]">@jonatankristof</p>
+                  </div>
+                </div>
+                 <!-- name+github ends -->
           </div>
           <!-- ticket ends -->
 

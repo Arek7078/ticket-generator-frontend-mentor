@@ -9,11 +9,17 @@ export function formDataHandler (){
  const descriptionH3 = document.getElementById('description-ticket');
  const descriptionP = document.getElementById('description-p-ticket');
  const dateTicket = document.getElementById('date');
+ const avatarContainer = document.getElementById('avatarContainer');
+ const nameTicket = document.getElementById('name-ticket');
+ const gitHubTicket = document.getElementById('github-ticket');
+
+ let fileURL = '';
 
  inputUpload.addEventListener('change', () =>{
     const file = inputUpload.files[0];
+    
     if(file){
-        const fileURL =URL.createObjectURL(file);
+        fileURL =URL.createObjectURL(file);
         const img = document.createElement('img');
         img.src = fileURL;
         img.className = 'max-w-[100px] max-h-[100px] p-1 m-auto';
@@ -34,6 +40,10 @@ export function formDataHandler (){
       descriptionH3.textContent = `Congrats, ${data.name}! Your ticket is ready.`;
       descriptionP.textContent = `We've emailed your ticket to ${data.email} and will send updates in the run up to the event.`;
       dateTicket.textContent = `Date: ${new Date(date).toLocaleDateString()}`;
+      avatarContainer.innerHTML = `<img src="${fileURL}" alt="avatar" class="rounded-lg">`;
+      nameTicket.textContent = data.name;
+      gitHubTicket.textContent = data.github;
+      
  })
 
 }
