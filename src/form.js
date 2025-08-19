@@ -17,7 +17,19 @@ export function formDataHandler (){
 
  inputUpload.addEventListener('change', () =>{
     const file = inputUpload.files[0];
-    
+    console.log(file.size);
+    //if more than 500kb
+    if(file.size > 500000){
+        alert('File size exceeds 500kb. Please upload a smaller file.');
+         labelUpload.innerHTML = `<span class="text-red-500">File size exceeds 500kb. Please upload a smaller file.</span>`;
+        return;
+    }
+    //if file is not an image jpg or png
+    if(!file.type.includes('image') || (!file.type.includes('jpg') && !file.type.includes('png'))){
+        alert('Please upload a valid image file (jpg or png).');
+         labelUpload.innerHTML = `<span class="text-red-500">Please upload a valid image file (jpg or png).</span>`;
+         return;
+      }
     if(file){
         fileURL =URL.createObjectURL(file);
         const img = document.createElement('img');
@@ -40,7 +52,7 @@ export function formDataHandler (){
       descriptionH3.textContent = `Congrats, ${data.name}! Your ticket is ready.`;
       descriptionP.textContent = `We've emailed your ticket to ${data.email} and will send updates in the run up to the event.`;
       dateTicket.textContent = `Date: ${new Date(date).toLocaleDateString()}`;
-      avatarContainer.innerHTML = `<img src="${fileURL}" alt="avatar" class="rounded-lg">`;
+      avatarContainer.innerHTML = `<img src="${fileURL}" alt="avatar" class="rounded-lg max-w-[80px] max-h-[80px]">`;
       nameTicket.textContent = data.name;
       gitHubTicket.textContent = data.github;
       
